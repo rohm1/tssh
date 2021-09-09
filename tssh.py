@@ -4,7 +4,7 @@ from os import path
 import sys
 
 if len(sys.argv) != 2:
-    print "missing argument 1"
+    print("missing argument 1")
     sys.exit(1)
 
 arg1 = sys.argv[1]
@@ -48,7 +48,7 @@ def get_clusters():
 
 # autocompelete mode: return all the cluster names
 if arg1 == '__autocomplete':
-    print get_clusters()
+    print(get_clusters())
 
 # cluster name given: split the terminal and connect to the servers
 elif arg1 in cssh_conf:
@@ -84,5 +84,5 @@ elif arg1 in cssh_conf:
 
 # what now?
 else:
-    print arg1 + " is not a known cluster. try one of " + get_clusters()
+    print(arg1 + " is not a known cluster. try one of " + get_clusters())
     sys.exit(1)
